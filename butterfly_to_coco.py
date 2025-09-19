@@ -6,7 +6,7 @@ import json
 class ButterflyToCOCOConverter(convert_to_coco.COCOConverter):
     def __init__(self):
         super().__init__()
-        self.id_counter = 4e16
+        self.id_counter = 101 * 10**14
 
     def convert_annotation_to_coco(self, data_folder):
         id_counter = int(self.id_counter)
