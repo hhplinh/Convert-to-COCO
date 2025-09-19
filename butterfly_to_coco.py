@@ -56,7 +56,7 @@ class ButterflyToCOCOConverter(convert_to_coco.COCOConverter):
                     x_topright = max(x_coords, default=1)
                     y_topright = max(y_coords, default=1)
 
-                    bbox = [x_topleft, y_topleft, x_topright, y_topright]
+                    bbox = [x_topleft, y_topleft, x_topright - x_topleft, y_topright - y_topleft]
 
                     bbox_area = bbox[2] * bbox[3]
 
